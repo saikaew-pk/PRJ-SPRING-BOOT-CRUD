@@ -42,5 +42,11 @@ public class EmployeeServiceImpl implements EmployeeService {
 	public void delete(int empId) {
 		employeeDAO.delete(empId);
 	}
+	
+	@Override
+	@Transactional
+	public List<Employee> findEmployeeByName(String name){
+		return employeeDAO.findEmployeeByName(name);
+	}
 
 }
